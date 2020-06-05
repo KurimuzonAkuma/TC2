@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <proj.h>
-#include <dos.h> /* comment */
+#include <dos.h> 
 static char*const VMEM = (char*)0xB8000000L;
 
 void error_handler (int err) {
