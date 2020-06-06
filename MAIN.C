@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include <proj.h>
-#include <windowsh.h>
+#include <programm/proj.h>
+#include <programm/windowsh.h>
 #include <conio.h>
 int main() {
     window_t *w1, *w2;

@@ -1,5 +1,5 @@
-#include <proj.h>
-#include <windowsh.h>
+#include <programm/proj.h>
+#include <programm/windowsh.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

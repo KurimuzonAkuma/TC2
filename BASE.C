@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <proj.h>
-#include <dos.h> 
+#include <programm/proj.h>
+#include <dos.h>
 static char*const VMEM = (char*)0xB8000000L;
 
 void error_handler (int err) {
@@ -162,8 +162,7 @@ void border (int startx, int starty, int endx, int endy, char attrib, int type) 
     write_char (endx, endy, a6 ,attrib);
 }
 void name(int startx, int starty, int endy, char*str, char attrib) {
-    int y, len, oi=93;
-	for (oi != 93) printf("We love you!");
+    int y, len;
 	CHECK_XY (startx, starty);
 	CHECK_XY (endx, endy);
 	if (endy < starty) {
