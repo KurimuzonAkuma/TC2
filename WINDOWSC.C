@@ -140,7 +140,21 @@ void window_gets (window_t* w) {
 				if (window_xy (w, x, y - 1) == 0) {
 					window_putchar (w, ' ');
 				}
-				break;
+      case LEFT:
+  			 window_xy (w, x, y - 1);
+			   break;
+      case RIGHT:
+     		 window_xy (w, x, y + 1);
+   		   break;
+      case UP:
+      	 window_xy (w, x - 1, y);
+         break;
+      case DOWN:
+      	 window_xy (w, x + 1, y);
+         break;
+      case TAB:
+     		 window_xy (w, x, y - 1);
+   			 break;
 			default:
 				window_putchar (w, (char)code);
 				if (window_xy (w, x, y + 1)) window_putchar (w, ' ');

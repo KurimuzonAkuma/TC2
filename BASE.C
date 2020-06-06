@@ -3,6 +3,7 @@
 #include <string.h>
 #include <programm/proj.h>
 #include <dos.h>
+#include <bios.h>
 static char*const VMEM = (char*)0xB8000000L;
 
 void error_handler (int err) {
@@ -182,10 +183,17 @@ void clear_screen (void) {
 	clear (0, 0, 24, 79, ' ', WHITE | BGBLACK);
 }
 
-int get_key (void) {
+/*int get_key (void) {
 	_AH = 0x00;
 	geninterrupt (0x16);
 	return _AX;
+}*/
+int get_key (void) {
+	int key, lo, hi;
+	key = bioskey(0);
+	lo = key & 0x00FF;
+	hi = (key & 0xFF00) >> 8;
+	return (lo == 0) ? hi+256 : lo;
 }
 
 void goto_xy (int x, int y) {
