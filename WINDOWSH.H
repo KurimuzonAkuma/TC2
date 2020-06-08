@@ -3,10 +3,10 @@
 #define WIN_MAXCOUNT 20
 
 enum KEY_BUTTONS {
-    UP = 0x09,
-    LEFT = 0x10,
-    DOWN = 0x11,
-    RIGHT = 0x12,
+    UP = 0x11,
+    LEFT = 0x12,
+    DOWN = 0x13,
+    RIGHT = 0x14,
     PGUP = 0x149,
     PGDN = 0x151,
     HOME = 0x147,

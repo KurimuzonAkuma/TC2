@@ -137,7 +137,7 @@ void window_gets (window_t* w) {
 				window_xy (w, x + 1, 0);
 				break;
 			case BKSP:
-				if (window_xy (w, x, y - 1) == 0) {
+				if (window_xy (w, x, y ) == 0) {
 					window_putchar (w, ' ');
 				}
       case LEFT:
