@@ -1,5 +1,5 @@
-programm/BASE.C
-programm/MAIN.C
-programm/WINDOWSC.C
-programm/WINDOWSH.H
-programm/PROJ.H
+programm/base.c
+programm/main.c
+programm/windows.c
+programm/windowsh.h
+programm/proj.h
